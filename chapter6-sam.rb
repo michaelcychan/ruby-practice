@@ -8,7 +8,6 @@ If the user's name begins with any other letter, the program just says 'Hi, ' pl
 
 
 puts "Hi! What\'s your name?"
-
 usrName = gets.chomp
 
 (usrName.match? /^[Ss]/) ? (puts usrName.capitalize) :  (puts "Hello, #{usrName.capitalize}!")
