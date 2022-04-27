@@ -33,7 +33,7 @@ num_of_round = user_input.to_i
 #print num_of_player.to_s + "\n" + num_of_dice.to_s + "\n" + num_of_round.to_s
 
 dice_result = Array.new(num_of_round){Array.new(num_of_player){Array.new(num_of_dice)}}
-sum = Array.new(num_of_player){0}
+win = Array.new
 
 dice_result.each {|nr|
     nr.each{|np|
@@ -43,16 +43,21 @@ dice_result.each {|nr|
     }
 }
 
+# compare each round
+
+
+
 #print dice_result
 for i in 1..num_of_round do
     print "Round #{i} results:\n"
     for j in 1 .. num_of_player do
-        print "Round #{i} result of Player #{j}:\n"
+        print "Round #{i} result of Player #{j}: "
         print dice_result[i-1][j-1]
-        print "\nThe total sum of this round is:\n"
+        print "\nThe total sum of this round is: "
         print dice_result[i-1][j-1].sum
         print "\n"
         #sum[i-1] += dice_result[i-1][j-1].sum
     end
+    print "The player of Round #{i + 1} is Player ... "
     #print "The winner of Round #{i} is Player XXX. The sum of this throw is #{dice_result[i-1][j-1].sum}"
 end
