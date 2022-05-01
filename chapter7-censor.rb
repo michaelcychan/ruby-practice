@@ -7,7 +7,6 @@ Replace each negative word or phrase them with the word "CENSORED".
 Some test tweets have been provided for you.
 =end
 
-
 test_tweets = [
   "This president sucks!",
   "I hate this Blank House!",
@@ -17,8 +16,19 @@ test_tweets = [
 
 banned_phrases = ["sucks", "bad", "hate", "foolish", "danger to society"]
 
+=begin
 test_tweets.map! do |tweet|
     tweet.split.map!{|word| (banned_phrases.include? word) ? "CENSORED" : word }.join(" ")
 end
+=end
+output = []
 
-print test_tweets
+test_tweets.map! do |tweet|
+    for i in 0..(banned_phrases.length - 1)
+      tweet.gsub!(banned_phrases[i], "CENSORED")
+    end
+    output.push(tweet)
+end
+
+print output
+print "\n"
