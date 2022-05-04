@@ -13,10 +13,10 @@ print "\n\n"
 player_bysport = Hash.new
 
 players.each do |person|
-    if player_bysport[person[:sport]] == nil
-        player_bysport[person[:sport]] = []
+    if player_bysport[person[:sport].to_sym] == nil
+        player_bysport[person[:sport].to_sym] = []
     end
-    player_bysport[person[:sport]].push(person[:name])
+    player_bysport[person[:sport].to_sym].push(person[:name])
 end
 
 print player_bysport
