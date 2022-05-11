@@ -1,0 +1,1 @@
+def q;"def q;; end; puts q()[0,6] + 34.chr + q + 34.chr + q()[6,q.length-6]" ; end; puts q()[0,6] + 34.chr + q + 34.chr + q()[6,q.length-6]
