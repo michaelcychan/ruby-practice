@@ -10,6 +10,7 @@
 def fibonacci(num)
   return 0 if num <= 1
   fib = [0,1]
+  puts fib
   (num - 2).times do
     fib.push(fib[-2] + fib[-1])
   end
