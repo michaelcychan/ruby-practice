@@ -11,6 +11,7 @@ def fibonacci(num)
   return 0 if num <= 1
   fib = [0,1]
   (num - 2).times do
+    p "fib[-2] is #{fib[-2]}, fib[-1] is #{fib[-1]}"
     fib.push(fib[-2] + fib[-1])
   end
   return fib
